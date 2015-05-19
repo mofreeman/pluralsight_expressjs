@@ -1,0 +1,40 @@
+doctype
+html(lang="en")
+    head
+        title Empty
+        script(src='/scripts/utils.js')
+    body
+        script.
+            dialog('Welcome to my page');
+
+        h1 Jade View Engine
+        h2 Header 2
+        - var env='dev';
+
+        - if (env == 'dev') {
+            p This is the first paragraph.
+        - } else {
+            p
+                | Next paragraph
+                | With some mulitple lines
+                | done
+        - }
+        div#elements  Some more text in a div with an id
+        
+        #other_elements
+            | More content
+        .items Divs can have classes too
+        
+            | Event things like lists
+            ul
+                li First
+                li Second
+                li third
+        p
+        a(href='http://mofreeman.com') Links example
+        
+        div simple form example
+            form(method='POST', action='/')
+                label(for='name') Name
+                input(name='name', id='name')
+                input(type='submit', value='create')
